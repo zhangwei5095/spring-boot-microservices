@@ -9,13 +9,16 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>boot-admin-server</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <artifactId>boot-consul-server</artifactId>
     <packaging>jar</packaging>
 
-    <name>boot-admin-server</name>
-    <description>Spring Boot admin Server</description>
+    <name>Spring Boot Consul Server</name>
+    <description>Consul Server project for Spring Boot</description>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -23,15 +26,18 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-server</artifactId>
-            <version>1.4.1</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-config</artifactId>
         </dependency>
         <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-server-ui</artifactId>
-            <version>1.4.1</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
